@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentCRUD.Core.Api", "StudentCRUD.Core.Api\StudentCRUD.Core.Api.csproj", "{E239BF11-1611-4AB9-B747-1FC897EA0465}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentCRUD.Core.Api", "StudentCRUD.Core.Api\StudentCRUD.Core.Api.csproj", "{E239BF11-1611-4AB9-B747-1FC897EA0465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentCRUD.Core.Tests.Unit", "StudentCRUD.Core.Tests.Unit\StudentCRUD.Core.Tests.Unit.csproj", "{7B4DAAE9-2CE6-4EAA-83BE-99274B3547B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E239BF11-1611-4AB9-B747-1FC897EA0465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E239BF11-1611-4AB9-B747-1FC897EA0465}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E239BF11-1611-4AB9-B747-1FC897EA0465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4DAAE9-2CE6-4EAA-83BE-99274B3547B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4DAAE9-2CE6-4EAA-83BE-99274B3547B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4DAAE9-2CE6-4EAA-83BE-99274B3547B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4DAAE9-2CE6-4EAA-83BE-99274B3547B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
