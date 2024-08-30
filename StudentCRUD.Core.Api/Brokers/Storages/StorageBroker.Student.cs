@@ -12,5 +12,8 @@ namespace StudentCRUD.Core.Api.Brokers.Storages
 
         public IQueryable<Student> SelectAllStudents() =>
              SelectAll<Student>();
+
+        public async ValueTask<Student> SelectStudentByIdAsync(Guid studentId)=>
+            await SelectAsync<Student>(studentId);
     }
 }
