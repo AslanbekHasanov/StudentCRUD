@@ -9,5 +9,8 @@ namespace StudentCRUD.Core.Api.Brokers.Storages
 
         public async ValueTask<Student> InsertStudentAsync(Student student) =>
             await InsertAsync(student);
+
+        public IQueryable<Student> SelectAllStudents() =>
+             SelectAll<Student>();
     }
 }
