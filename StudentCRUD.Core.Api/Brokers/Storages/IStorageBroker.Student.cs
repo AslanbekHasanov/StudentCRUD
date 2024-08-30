@@ -4,5 +4,6 @@ namespace StudentCRUD.Core.Api.Brokers.Storages
 {
     public partial interface IStorageBroker
     {
+        ValueTask<Student> InsertStudentAsync(Student student);
     }
 }

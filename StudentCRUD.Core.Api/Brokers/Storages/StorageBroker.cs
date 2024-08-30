@@ -5,7 +5,7 @@ using STX.EFxceptions.SqlServer;
 
 namespace StudentCRUD.Core.Api.Brokers.Storages
 {
-    public class StorageBroker : EFxceptionsContext, IStorageBroker
+    public partial class StorageBroker : EFxceptionsContext, IStorageBroker
     {
         private readonly IConfiguration configuration;
 
@@ -15,7 +15,15 @@ namespace StudentCRUD.Core.Api.Brokers.Storages
             this.Database.Migrate();
         }
 
-        public DbSet<Student> Students { get; set; }
+        private async ValueTask<T> InsertAsync<T>(T @object)
+        {
+            var broker = new StorageBroker(this.configuration);
+
+            broker.Entry(@object).State = EntityState.Added;
+            await broker.SaveChangesAsync();
+
+            return @object;
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
