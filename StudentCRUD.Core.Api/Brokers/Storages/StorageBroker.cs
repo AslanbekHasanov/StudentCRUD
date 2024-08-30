@@ -25,6 +25,13 @@ namespace StudentCRUD.Core.Api.Brokers.Storages
             return @object;
         }
 
+        public IQueryable<T> SelectAll<T>() where T : class
+        {
+            var broker = new StorageBroker(this.configuration);
+
+            return broker.Set<T>();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string connectionString =
@@ -32,7 +39,5 @@ namespace StudentCRUD.Core.Api.Brokers.Storages
 
             optionsBuilder.UseSqlServer(connectionString);
         }
-
-
     }
 }
