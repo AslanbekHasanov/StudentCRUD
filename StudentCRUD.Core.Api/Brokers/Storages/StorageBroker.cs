@@ -35,6 +35,15 @@ namespace StudentCRUD.Core.Api.Brokers.Storages
         private async ValueTask<T> SelectAsync<T>(params object[] objectIds) where T : class =>
          await FindAsync<T>(objectIds);
 
+        public async ValueTask<T> UpdateAsync<T>(T @object)
+        {
+            var broker = new StorageBroker(this.configuration);
+            broker.Entry(@object).State = EntityState.Modified;
+            await broker.SaveChangesAsync();
+
+            return @object;
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string connectionString =
