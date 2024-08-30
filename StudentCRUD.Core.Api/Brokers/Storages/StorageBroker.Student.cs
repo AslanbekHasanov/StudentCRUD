@@ -18,5 +18,8 @@ namespace StudentCRUD.Core.Api.Brokers.Storages
 
         public async ValueTask<Student> UpdateStudentAsync(Student student)=>
             await UpdateAsync<Student>(student);
+
+        public async ValueTask<Student> DeleteStudentAsync(Student student)=>
+            await DeleteAsync<Student>(student);
     }
 }
